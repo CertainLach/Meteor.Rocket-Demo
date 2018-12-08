@@ -1,0 +1,25 @@
+{
+  "name": "meteor.rocket-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CertainLach/Meteor.Rocket-Demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CertainLach/Meteor.Rocket-Demo/issues"
+  },
+  "homepage": "https://github.com/CertainLach/Meteor.Rocket-Demo#readme",
+  "dependencies": {
+    "@meteor-it/logger": "^2.3.17",
+    "@meteor-it/rocket": "^2.4.20",
+    "@meteor-it/xpress": "^4.2.18",
+    "zarbis": "^1.5.58"
+  }
+}
