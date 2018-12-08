@@ -20,6 +20,7 @@
     "@meteor-it/logger": "^2.3.17",
     "@meteor-it/rocket": "^2.4.20",
     "@meteor-it/xpress": "^4.2.18",
+    "@types/node": "^10.12.12",
     "zarbis": "^1.5.58"
   }
 }
