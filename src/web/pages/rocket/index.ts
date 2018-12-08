@@ -52,6 +52,6 @@ const root = () => {
     ]);
 }
 
-rocket.router.on(null, '/rocket/convert', ctx => {
+rocket.router.on(null, '/rocket/converter', ctx => {
     ctx.state.drawTarget = h(root);
 })
