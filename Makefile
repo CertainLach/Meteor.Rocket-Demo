@@ -1,9 +1,12 @@
 .PHONY: dev prod start-dev start-prod
 
-dev:
+node_modules:
+	yarn
+
+dev: node_modules
 	npx zarbis development
 
-prod:
+prod: node_modules
 	npx zarbis production
 
 start-dev: dist/development/server

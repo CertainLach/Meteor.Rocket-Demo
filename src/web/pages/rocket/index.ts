@@ -2,6 +2,7 @@ import { useState, h, useStyles } from "@meteor-it/rocket";
 import * as parse5 from 'parse5';
 import rocket from '../../rocket';
 import * as rocketStyle from './index.less';
+import wrappingContainer from "../components/wrappingContainer";
 
 const addPadding = string => string.split('\n').map(e => `\t${e}`).join('\n');
 const toCamelCase = s => s.replace(/-+./g, (e) => e[e.length - 1].toUpperCase());
@@ -38,7 +39,7 @@ const root = () => {
     const [text, setText] = useState('<test/>');
     if (text === '<test/>' && process.env.BROWSER) { setTimeout(() => setText(document.body.innerHTML), 1); }
     const translated = htmlToRocket(text);
-    return h('div', { class: [rocketStyle.convertRoot] }, [
+    return h(wrappingContainer,[h('div', { class: [rocketStyle.convertRoot] }, [
         h('textarea', {
             class: [rocketStyle.input],
             onChange(el) { setText(el.target.value) },
@@ -49,7 +50,7 @@ const root = () => {
             value: translated,
             readOnly: true
         })
-    ]);
+    ])]);
 }
 
 rocket.router.on(null, '/rocket/converter', ctx => {

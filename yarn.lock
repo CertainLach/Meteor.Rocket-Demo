@@ -32,15 +32,15 @@
   resolved "https://registry.yarnpkg.com/@meteor-it/mime/-/mime-0.4.11.tgz#7ed86c79e6e62cc04231ed5b9ecaf1bcb54ea041"
   integrity sha512-I+Jb5+8UJItcsQu3n9RSqZyQP0WWKg42Yo5mTutSJtqF0G7QQGWxhdeyx2bMBSQG2cwuhqn31bL1OZLlp7F/wA==
 
-"@meteor-it/rocket@^2.4.20":
-  version "2.4.20"
-  resolved "https://registry.yarnpkg.com/@meteor-it/rocket/-/rocket-2.4.20.tgz#8ed3ffee67a889b3a03fc2aacb1f60fbd982e25c"
-  integrity sha512-1AbcYeseV78XB0eXiYBYequWBTRqMYfGW5iJrEuLV8I/QR7ZSuoH8DnSGs2MlvTmFtzqvz7JJD3ac6rwG2xQ7A==
+"@meteor-it/rocket@^2.4.21":
+  version "2.4.21"
+  resolved "https://registry.yarnpkg.com/@meteor-it/rocket/-/rocket-2.4.21.tgz#71b49cf55a1a7dcf0610ced57a6a4dd4393f546e"
+  integrity sha512-vMCdopsFI6uxurT77KafW1EFjvFZJB8+MoPJFAfchKBnwyS9pPmI7ri9ODsmX2IM7H1Rga2PnAnhr+qn8IId6Q==
   dependencies:
     "@meteor-it/fs" "^1.1.0"
     "@meteor-it/router" "^2.1.19"
     "@meteor-it/utils" "^1.3.10"
-    "@meteor-it/xpress" "^4.2.18"
+    "@meteor-it/xpress" "^4.2.19"
     "@types/hoist-non-react-statics" "^3.0.1"
     hoist-non-react-statics "^3.1.0"
     mobx "^5.5.0"
@@ -70,6 +70,20 @@
   version "4.2.18"
   resolved "https://registry.yarnpkg.com/@meteor-it/xpress/-/xpress-4.2.18.tgz#02c5fcfb4b2e2da11df77124998afe762a3a7583"
   integrity sha512-kT533BnmnJj7OndDBfTns3tUDtgI4Erf6o5wzDuMo7fD5lZVtYppFf0ayf7MPsJmh2wtrBOyeIDyW8HJCouwgg==
+  dependencies:
+    "@discordjs/uws" "^11.149.1"
+    "@meteor-it/ajson" "^0.4.8"
+    "@meteor-it/fs" "^1.1.0"
+    "@meteor-it/logger" "^2.3.17"
+    "@meteor-it/mime" "^0.4.11"
+    "@meteor-it/router" "^2.1.19"
+    "@meteor-it/utils" "^1.3.10"
+    express-session "^1.15.6"
+
+"@meteor-it/xpress@^4.2.19":
+  version "4.2.19"
+  resolved "https://registry.yarnpkg.com/@meteor-it/xpress/-/xpress-4.2.19.tgz#3abd09f1bd438bd0e141a27ceaaaba9c4bd922b2"
+  integrity sha512-SSM7ilhuABL/TUknmtlxpPXLEPGE4rnevXiDI03jULi9dpP0yhXWWZgxctlgartl16deLkwJVyfFSjdIZ5P7Mw==
   dependencies:
     "@discordjs/uws" "^11.149.1"
     "@meteor-it/ajson" "^0.4.8"
@@ -137,6 +151,13 @@ depd@~1.1.1:
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
+encoding@^0.1.11:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
+  integrity sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
+  dependencies:
+    iconv-lite "~0.4.13"
+
 express-session@^1.15.6:
   version "1.15.6"
   resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.15.6.tgz#47b4160c88f42ab70fe8a508e31cbff76757ab0a"
@@ -158,6 +179,26 @@ hoist-non-react-statics@^3.1.0:
   integrity sha512-TFsu3TV3YLY+zFTZDrN8L2DTFanObwmBLpWvJs1qfUuEQ5bTAdFcwfx2T/bsCXfM9QHSLvjfP+nihEl0yvozxw==
   dependencies:
     react-is "^16.3.2"
+
+iconv-lite@~0.4.13:
+  version "0.4.24"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
+  integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3"
+
+is-stream@^1.0.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
+  integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
+
+isomorphic-fetch@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+  integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
+  dependencies:
+    node-fetch "^1.0.1"
+    whatwg-fetch ">=0.10.0"
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
@@ -185,6 +226,14 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
   integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
+
+node-fetch@^1.0.1:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+  integrity sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
+  dependencies:
+    encoding "^0.1.11"
+    is-stream "^1.0.1"
 
 object-assign@^4.1.1:
   version "4.1.1"
@@ -244,6 +293,11 @@ react@^16.7.0-alpha.2:
     prop-types "^15.6.2"
     scheduler "^0.12.0-alpha.2"
 
+"safer-buffer@>= 2.1.2 < 3":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+  integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
 scheduler@^0.12.0-alpha.2:
   version "0.12.0-alpha.3"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.12.0-alpha.3.tgz#59afcaba1cb79e3e8bee91de94eb8f42c9152c2b"
@@ -263,6 +317,11 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
+
+whatwg-fetch@>=0.10.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
+  integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
 
 zarbis@^1.5.58:
   version "1.5.58"

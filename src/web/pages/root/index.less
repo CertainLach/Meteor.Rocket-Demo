@@ -3,34 +3,77 @@ body {
     font-size: 62.5%;
     margin: 0;
 }
-a{
-    color:inherit;
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    height: 1px;
+    display: block;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 40px;
+    width: 40px; //border-radius: 2px; 
+    background: fade( #000000, 50);
+    &:hover {
+        background: fade( #000000, 100);
+    }
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+// TODO: Provide a fancy way for outline
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+a {
+    color: inherit;
     text-decoration: inherit;
 }
-a:visited{
-    color:inherit;
+
+a:visited {
+    color: inherit;
 }
+
 h1 {
     font-size: 60px;
-    line-height: 90px;
-    //font-family: "Dosis", Arial, sans-serif;
-  }
-  h2 {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
     font-size: 38px;
-    line-height: 50px;
-    // .font_bold;
-  }
-  h3 { 
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
     font-size: 12px;
-    line-height: 18px;
-    // .font_normal;
-  }
-  hr{
+    padding: 0;
+    margin: 0;
+}
+
+hr {
     width: 100%;
     color: #7a7a7a;
-  }
-  
-  p {
+}
+
+p {
     font-size: 14px;
     line-height: 21px;
-  }
+}
