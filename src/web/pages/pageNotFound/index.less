@@ -1,0 +1,25 @@
+.root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    background: #000000;
+    svg{
+        height: 8em;
+        width: 8em;
+        padding-bottom: 2em;
+        animation: float 6s ease-in-out infinite;
+    }
+}
+@keyframes float {
+    0% {
+        transform: translate(0,-10px);
+    }
+    50% {
+        transform: translate(0,10px);
+    }
+    100% {
+        transform: translate(0, -10px);
+    }
+}

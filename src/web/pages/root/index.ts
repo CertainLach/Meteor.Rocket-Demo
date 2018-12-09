@@ -3,6 +3,7 @@ import * as rootStyle from './index.less';
 import { h, useStyles } from '@meteor-it/rocket';
 import header from '../components/header';
 import container from '../components/container';
+import pageNotFound from '../pageNotFound';
 
 const root = ({ children }) => {
     useStyles(rootStyle);
@@ -20,5 +21,5 @@ rocket.router.on(null, null, async ctx => {
             `Error: ${e.message}`
         ]);
     }
-    ctx.state.drawTarget = h(root, [ctx.state.drawTarget || `Page not found`]);
+    ctx.state.drawTarget = h(root, [ctx.state.drawTarget || h(pageNotFound)]);
 });
