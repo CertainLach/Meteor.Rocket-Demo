@@ -13,8 +13,9 @@ const home = () => {
             short: 'lw',
             data: 'test',
             title: 'CertainLach\'s personal website',
-            subtitle: 'А почему бы и нет?'
-        })
+            subtitle: 'А почему бы и нет?',
+            tags: ['demo','web']
+        },['Похоже что ты достиг конца интернета',h('br'),'Иначе как ты смог очутиться тут?'])
     ])])]);
 }
 /*

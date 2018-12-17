@@ -1,6 +1,6 @@
 import rocket from '../../rocket';
 import * as rootStyle from './index.less';
-import { h, useStyles } from '@meteor-it/rocket';
+import { h, useStyles, Helmet } from '@meteor-it/rocket';
 import header from '../components/header';
 import container from '../components/container';
 import pageNotFound from '../pageNotFound';
@@ -8,6 +8,11 @@ import pageNotFound from '../pageNotFound';
 const root = ({ children }) => {
     useStyles(rootStyle);
     return h([
+        h(Helmet,[
+            h('title',['0lach']),
+            h('html',{lang:'ru'}),
+            h('meta')
+        ]),
         h(header),
         h(container, [children])
     ]);

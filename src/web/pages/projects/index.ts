@@ -1,4 +1,4 @@
-import { h, useStyles, useAsync } from "@meteor-it/rocket";
+import { h, useStyles, useAsync, Helmet } from "@meteor-it/rocket";
 import rocket from "../../rocket";
 import * as styles from './index.less';
 import wrappingContainer from "../components/wrappingContainer";
@@ -25,6 +25,9 @@ const projects = () => {
     });
     return h(wrappingContainer, [
         h(limitingColumn, [
+            h(Helmet,[
+                h('title',['0lach - проекты'])
+            ]),
             h('h2', ['Проекты']),
             ...['Немногие из моих личных проектов доходят до завершения, т.к по большей части я разрабатываю ради своего развлечения и наобра опыта, а не для получения законченного продукта.', 'Законченные проекты лучше смотреть в моём портфолио, а о развитии этих - в блоге'].map(e => h('p', [e])),
             h('div', { class: [styles.buttons] }, [
@@ -33,7 +36,7 @@ const projects = () => {
             ]),
             h(subtitle, { name: 'СЛУЧАЙНЫЕ', subname: 'ИССЛЕДОВАНИЯ И ПРОТОТИПЫ' }),
             state===LoadingState.LOADING&&h(['Загрузка...']),
-            state===LoadingState.ERRORED&&h(['Ошибка!']),
+            state===LoadingState.ERRORED&&h(['Ошибка!',loaded.message]),
             state===LoadingState.LOADED&&loaded.map((e:IProject)=>h([
                 e.name,
                 e.description

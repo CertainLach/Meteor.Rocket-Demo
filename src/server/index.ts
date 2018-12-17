@@ -8,7 +8,6 @@ import IProject from '../common/IProject';
 Logger.addReceiver(new NodeReceiver());
 
 xpress.on('GET','/api/projects',async ctx=>{
-    await new Promise(res=>setTimeout(res,5000));
     ctx.stream.send(JSON.stringify([{
         name: 'Ayzek',
         description:'Многофункциональный кроссплатформенный чат бот',

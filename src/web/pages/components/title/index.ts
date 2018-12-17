@@ -10,7 +10,7 @@ const tag = ({text}:{text:string})=>{
 
 const tagList = ({children}:{children:string[]})=>{
     useStyles(tagStyle);
-    return h('div',{class:[tagStyle.main]},children.map(t=>h(tag,{text:t})));
+    return h('div',{class:[tagStyle.tag]},children.map(t=>h(tag,{text:t})));
 }
 
 export default (props:{
